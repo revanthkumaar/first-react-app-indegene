@@ -1,15 +1,16 @@
 import React from 'react';
+class MenuItem extends React.Component{
 
-const MenuItem = ({title, imageurl, linkUrl, size}) => {
-
-    return (
-      <>
-       
-        <div>{title}</div>
-        
-      </>
-    );
+render() {
+  return <div>{this.props.linkUrl}</div>
+}
 
 }
+/*
+
+const MenuItem = props => <p>{props.title}</p>
+
+
+*/
 
 export default MenuItem;
