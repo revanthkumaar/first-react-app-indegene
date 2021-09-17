@@ -7,7 +7,7 @@ import {BrowserRouter} from 'react-router-dom'
 
 //linking redux with react application
 import {Provider} from "react-redux";
-import configureStore from "store";
+import configureStore from "./store";
 
 ReactDOM.render(
   <Provider store={configureStore()}>
