@@ -1,8 +1,10 @@
 import {createStore} from "redux";
 import rotateReducer from "./reducers/rotateReducer"
 
-function configureStore(state={rotate:true}) {
-    return createStore(rotateReducer,state);
+const state = { rotate: true, loading: false };
+
+function configureStore(state) {
+  return createStore(rotateReducer, state);
 }
 
 export default configureStore;

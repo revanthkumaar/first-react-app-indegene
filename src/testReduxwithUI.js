@@ -26,9 +26,9 @@ const mapStateToProps = (state) => ({
   ...state,
 });
 
-const mapDispatchToProps = (dispatch) => {
-  startAction: () => dispatch(firstAction);
-  stopRotation: () => dispatch(secondAction);
-};
+const mapDispatchToProps = (dispatch) => ({
+  startAction: () => dispatch(firstAction),
+  stopRotation: () => dispatch(secondAction)
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(RotateFunction);
