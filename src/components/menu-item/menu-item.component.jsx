@@ -1,23 +1,28 @@
 import React from 'react';
-class MenuItem extends React.Component{
+import './menu-item.component.scss';
+import {withRouter} from 'react-router-dom';
 
-render() {
-  return (
-    <>
-      <div>{this.props.linkUrl}</div>
-      <div>{this.props.title}</div>
-      <div>{this.props.id}</div>
-      
-    </>
-  );
+
+const MenuItem = ({title, imageUrl, history, match, size, location, linkUrl}) => {
+    console.log(match);
+    console.log(history);
+    console.log(location);
+  return(
+     <div classname={`${size} menu-item`} onClick={() => history.push(`${match.url}${linkUrl}`)}>
+    <div
+      className="background-image"
+      style={{
+        backgroundImage: `url(${imageUrl})`,
+      }}
+    />
+    <div className="content">
+      <h1 className="title">{title.toUpperCase()}</h1>
+      <span className="subtitle">SHOP NOW</span>
+    </div>
+  </div>
+
+  )
+ 
 }
 
-}
-/*
-
-const MenuItem = props => <p>{props.title}</p>
-
-
-*/
-
-export default MenuItem;
+export default withRouter(MenuItem); //wrapping a component in to HOC
