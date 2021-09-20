@@ -2,15 +2,15 @@ import React from 'react';
 import ToDo from '../todo/todo.component'
 
 const ToDoList = ({ toDoList }) => {
-  return <div>
+  return (<div className="todo-list">
       {
           toDoList.map(todo => {
               return (
-                  <ToDo todo={todo.task}/>
+                  <ToDo key={todo.id} todo={todo.task}/>
               )
           })
       }
-  </div>;
+  </div>);
 };
 
 export default ToDoList;

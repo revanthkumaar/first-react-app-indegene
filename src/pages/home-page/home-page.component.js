@@ -12,7 +12,7 @@ const HomePage = () => {
       <div className="home-page">
         <Header />
         <Directory />
-        <ToDoList toDoList={data}/>
+        <ToDoList toDoList={toDoList} />
       </div>
     );
 }
