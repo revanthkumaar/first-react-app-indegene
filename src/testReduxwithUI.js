@@ -16,6 +16,7 @@ class RotateFunction extends React.Component {
           className={"App-logo" + (this.props.rotate ? "" : "App-logo-paused")}
           onClick={
             this.props.rotate ? this.props.stopAction : this.props.startAction
+          
           }
           alt="logo"
         />
@@ -24,11 +25,11 @@ class RotateFunction extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   ...state,
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   startAction: () => dispatch(firstAction),
   stopAction: () => dispatch(secondAction)
 })
