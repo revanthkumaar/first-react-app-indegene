@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 //import actions
 import { firstAction } from "./actions/actionOne";
 import { secondAction } from "./actions/actionTwo";
+import './rotatecss.css'
 
 class RotateFunction extends React.Component {
   render() {
@@ -12,10 +13,11 @@ class RotateFunction extends React.Component {
       <div className="RotateFunction">
         <img
           src={logo}
-          className={this.props.rotate ? "" : "App-logo-paused"}
+          className={"App-logo" + (this.props.rotate ? "" : "App-logo-paused")}
           onClick={
             this.props.rotate ? this.props.stopAction : this.props.startAction
           }
+          alt="logo"
         />
       </div>
     );
